@@ -1,0 +1,226 @@
+object FCalculoDP: TFCalculoDP
+  Left = 277
+  Top = 106
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 638
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Left = 277
+  Top = 106
+  DesignerMasterStyle = 0
+  object ButtonCalcularE: TButton
+    Position.X = 184.000000000000000000
+    Position.Y = 336.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Calcular E'
+    OnClick = ButtonCalcularEClick
+  end
+  object ButtonLimpar: TButton
+    Position.X = 280.000000000000000000
+    Position.Y = 384.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Limpar'
+    OnClick = ButtonLimparClick
+  end
+  object EditN: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 9
+    Text = '0'
+    Position.X = 184.000000000000000000
+    Position.Y = 96.000000000000000000
+  end
+  object EditE: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    Text = '0'
+    Position.X = 376.000000000000000000
+    Position.Y = 96.000000000000000000
+  end
+  object EditA: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Text = '0'
+    Position.X = 184.000000000000000000
+    Position.Y = 144.000000000000000000
+    OnExit = EditAExit
+  end
+  object EditZ: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    CanFocus = False
+    ReadOnly = True
+    Text = '0'
+    Position.X = 376.000000000000000000
+    Position.Y = 240.000000000000000000
+  end
+  object EditPQ: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Text = '0'
+    Position.X = 184.000000000000000000
+    Position.Y = 192.000000000000000000
+  end
+  object EditI1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    ReadOnly = True
+    Text = '0'
+    Position.X = 184.000000000000000000
+    Position.Y = 288.000000000000000000
+  end
+  object EditI2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    ReadOnly = True
+    Text = '0'
+    Position.X = 376.000000000000000000
+    Position.Y = 288.000000000000000000
+  end
+  object EditEstimativa: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 184.000000000000000000
+    Position.Y = 240.000000000000000000
+  end
+  object Label1: TLabel
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    Position.X = 166.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 16.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'N'
+    TabOrder = 11
+  end
+  object Label2: TLabel
+    Position.X = 360.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 16.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'E'
+    TabOrder = 12
+  end
+  object Label3: TLabel
+    Position.X = 168.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'A'
+    TabOrder = 18
+  end
+  object Label4: TLabel
+    Position.X = 360.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Z'
+    TabOrder = 17
+  end
+  object Label5: TLabel
+    Position.X = 160.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'P/Q'
+    TabOrder = 16
+  end
+  object Label6: TLabel
+    Position.X = 96.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Estimativa Pr'#233'via'
+    TabOrder = 15
+  end
+  object Label7: TLabel
+    Position.X = 168.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'I1'
+    TabOrder = 14
+  end
+  object Label8: TLabel
+    Position.X = 360.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'I2'
+    TabOrder = 13
+  end
+  object CheckBoxPossuiEstimativa: TCheckBox
+    Position.X = 288.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+    Text = 'Possui'
+    OnChange = CheckBoxPossuiEstimativaChange
+  end
+  object PopupBoxSucesso: TPopupBox
+    Position.X = 376.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 21
+  end
+  object PopupBoxSignificancia: TPopupBox
+    Position.X = 376.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+    OnExit = EditAExit
+  end
+  object Label9: TLabel
+    Align = Scale
+    AutoTranslate = False
+    Position.X = 186.000000000000000000
+    Position.Y = 7.000000000000000000
+    Size.Width = 287.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'Label9Style1'
+    Text = 'C'#225'lculo de Intervalo de confian'#231'a'
+    TabOrder = 24
+  end
+  object ButtonCalcularN: TButton
+    Position.X = 376.000000000000000000
+    Position.Y = 336.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Calcular N'
+    OnClick = ButtonCalcularNClick
+  end
+  object PopupMenuSucesso: TPopupMenu
+    Left = 480
+    Top = 184
+  end
+  object PopupMenuSignificancia: TPopupMenu
+    Left = 480
+    Top = 136
+  end
+end

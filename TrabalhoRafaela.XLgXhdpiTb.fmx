@@ -1,0 +1,18 @@
+inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Label1: TLabel
+    Position.X = 328.000000000000000000
+    Size.Height = 22.000000000000000000
+  end
+  inherited PopupBoxSucesso: TPopupBox
+    Size.Height = 32.000000000000000000
+  end
+  inherited PopupBoxSignificancia: TPopupBox
+    Size.Height = 32.000000000000000000
+  end
+  inherited Label9: TLabel
+    StyledSettings = [Family, Style, FontColor]
+  end
+end
