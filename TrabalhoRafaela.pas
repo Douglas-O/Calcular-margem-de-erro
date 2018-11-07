@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ExtCtrls,
-  FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation, FMX.Menus, Math;
+  FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation, FMX.Menus, Math,
+  FMX.ListBox;
 
 type
   TFCalculoDP = class(TForm)
@@ -28,12 +29,12 @@ type
     Label7: TLabel;
     Label8: TLabel;
     CheckBoxPossuiEstimativa: TCheckBox;
-    PopupBoxSucesso: TPopupBox;
-    PopupBoxSignificancia: TPopupBox;
-    PopupMenuSucesso: TPopupMenu;
-    PopupMenuSignificancia: TPopupMenu;
     Label9: TLabel;
     ButtonCalcularN: TButton;
+    ComboBoxSignificancia: TComboBox;
+    ComboBoxSucesso: TComboBox;
+    Label10: TLabel;
+    EditNA: TEdit;
     procedure EditAExit(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ButtonCalcularEClick(Sender: TObject);
@@ -58,19 +59,10 @@ implementation
 
 procedure TFCalculoDP.FormCreate(Sender: TObject);
 begin
-  //Add the items
-  PopupBoxSucesso.Items.Add('Sucesso');
-  PopupBoxSucesso.Items.Add('Falha');
-  PopupBoxSignificancia.Items.Add('Significância');
-  PopupBoxSignificancia.Items.Add('Confiança');
 
   //Set the first item to be shown
-  PopupBoxSucesso.ItemIndex := 0;
-  PopupBoxSignificancia.ItemIndex := 0;
-
-  //Set the PopupMenu property - only for desktop applications
-  PopupBoxSucesso.PopupMenu := PopupMenuSucesso;
-  PopupBoxSignificancia.PopupMenu := PopupMenuSignificancia;
+  ComboBoxSignificancia.ItemIndex := 0;
+  ComboBoxSucesso.ItemIndex := 0;
 end;
 
 
@@ -80,7 +72,7 @@ var
   stringaux: string;
 begin
   n := StrToFloat(EditN.Text);
-  if (PopupBoxSucesso.ItemIndex = 0) then
+  if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     p := StrToFloat(EditPQ.Text);
     p := p/n;
@@ -139,10 +131,11 @@ var
  p, q, n, e, z, estimativaP, i1, i2, aux : Double;
  stringaux: string;
 begin
-  if (PopupBoxSucesso.ItemIndex = 0) then
+  n := StrToFloat(EditN.Text);
+  if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     p := StrToFloat(EditPQ.Text);
-    p := p/100;
+    p := p/n;
     p := p*10000;
     p := round(p);
     p := p/10000;
@@ -151,7 +144,7 @@ begin
   else
   begin
     q := StrToFloat(EditPQ.Text);
-    q := q/100;
+    q := q/n;
     q := q*10000;
     q := round(q);
     q := q/10000;
@@ -170,8 +163,8 @@ begin
         i2 := P;
       end;
   z := StrToFloat(EditZ.Text);
-  e := e/100;
   e := StrToFloat(EditE.Text);
+  e := e/100;
   i1 := i1 - e;
   i2 := i2 + e;
   aux := i1 * 10000;
@@ -188,7 +181,12 @@ begin
   EditI2.Text := stringaux;
 
   n := Power((z*Sqrt(p*q))/e, 2);
-  EditI2.Text := FloatToStr(round(n));
+  if( frac(n)>0) then
+  begin
+    n := n+1;
+  end;
+  n := trunc(n);
+  EditNA.Text := FloatToStr(n);
 end;
 
 procedure TFCalculoDP.ButtonLimparClick(Sender: TObject);
@@ -201,6 +199,7 @@ begin
   EditI1.Text := '0';
   EditI2.Text := '0';
   EditEstimativa.Text := '';
+  EditNA.Text := '';
 end;
 
 procedure TFCalculoDP.CheckBoxPossuiEstimativaChange(Sender: TObject);
@@ -264,8 +263,15 @@ var
   aux, aux2, aux3,a : Double;
   nachou : Boolean;
 begin
-  a := StrToFloat(EditA.Text);
-  if (PopupBoxSignificancia.ItemIndex = 0) then
+  if(EditA.Text = '') then
+  begin
+    a := 0;
+  end
+  else
+  begin
+    a := StrToFloat(EditA.Text);
+  end;
+  if (ComboBoxSignificancia.ItemIndex = 0) then
   begin
     a := 100-a;
   end;

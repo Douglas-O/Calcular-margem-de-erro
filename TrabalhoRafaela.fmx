@@ -1,7 +1,7 @@
 object FCalculoDP: TFCalculoDP
   Left = 277
   Top = 106
-  Caption = 'Form1'
+  Caption = 'C'#225'lculo de intervalo de confian'#231'a'
   ClientHeight = 480
   ClientWidth = 638
   Position = Designed
@@ -14,7 +14,7 @@ object FCalculoDP: TFCalculoDP
   DesignerMasterStyle = 0
   object ButtonCalcularE: TButton
     Position.X = 184.000000000000000000
-    Position.Y = 336.000000000000000000
+    Position.Y = 376.000000000000000000
     Size.Width = 97.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
@@ -24,7 +24,7 @@ object FCalculoDP: TFCalculoDP
   end
   object ButtonLimpar: TButton
     Position.X = 280.000000000000000000
-    Position.Y = 384.000000000000000000
+    Position.Y = 424.000000000000000000
     Size.Width = 97.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
@@ -37,21 +37,22 @@ object FCalculoDP: TFCalculoDP
     TabOrder = 9
     Text = '0'
     Position.X = 184.000000000000000000
-    Position.Y = 96.000000000000000000
+    Position.Y = 136.000000000000000000
   end
   object EditE: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 10
     Text = '0'
     Position.X = 376.000000000000000000
-    Position.Y = 96.000000000000000000
+    Position.Y = 136.000000000000000000
   end
   object EditA: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 8
     Text = '0'
     Position.X = 184.000000000000000000
-    Position.Y = 144.000000000000000000
+    Position.Y = 184.000000000000000000
+    OnChange = EditAExit
     OnExit = EditAExit
   end
   object EditZ: TEdit
@@ -61,14 +62,14 @@ object FCalculoDP: TFCalculoDP
     ReadOnly = True
     Text = '0'
     Position.X = 376.000000000000000000
-    Position.Y = 240.000000000000000000
+    Position.Y = 280.000000000000000000
   end
   object EditPQ: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 6
     Text = '0'
     Position.X = 184.000000000000000000
-    Position.Y = 192.000000000000000000
+    Position.Y = 232.000000000000000000
   end
   object EditI1: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -76,7 +77,7 @@ object FCalculoDP: TFCalculoDP
     ReadOnly = True
     Text = '0'
     Position.X = 184.000000000000000000
-    Position.Y = 288.000000000000000000
+    Position.Y = 328.000000000000000000
   end
   object EditI2: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -84,19 +85,17 @@ object FCalculoDP: TFCalculoDP
     ReadOnly = True
     Text = '0'
     Position.X = 376.000000000000000000
-    Position.Y = 288.000000000000000000
+    Position.Y = 328.000000000000000000
   end
   object EditEstimativa: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 3
     Position.X = 184.000000000000000000
-    Position.Y = 240.000000000000000000
+    Position.Y = 280.000000000000000000
   end
   object Label1: TLabel
-    Anchors = [akTop, akRight]
-    AutoSize = True
     Position.X = 166.000000000000000000
-    Position.Y = 96.000000000000000000
+    Position.Y = 136.000000000000000000
     Size.Width = 16.000000000000000000
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
@@ -105,7 +104,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label2: TLabel
     Position.X = 360.000000000000000000
-    Position.Y = 96.000000000000000000
+    Position.Y = 136.000000000000000000
     Size.Width = 16.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -114,7 +113,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label3: TLabel
     Position.X = 168.000000000000000000
-    Position.Y = 144.000000000000000000
+    Position.Y = 184.000000000000000000
     Size.Width = 17.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -123,7 +122,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label4: TLabel
     Position.X = 360.000000000000000000
-    Position.Y = 240.000000000000000000
+    Position.Y = 280.000000000000000000
     Size.Width = 17.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -132,7 +131,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label5: TLabel
     Position.X = 160.000000000000000000
-    Position.Y = 192.000000000000000000
+    Position.Y = 232.000000000000000000
     Size.Width = 25.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -141,7 +140,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label6: TLabel
     Position.X = 96.000000000000000000
-    Position.Y = 240.000000000000000000
+    Position.Y = 280.000000000000000000
     Size.Width = 89.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -150,7 +149,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label7: TLabel
     Position.X = 168.000000000000000000
-    Position.Y = 288.000000000000000000
+    Position.Y = 328.000000000000000000
     Size.Width = 17.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -159,7 +158,7 @@ object FCalculoDP: TFCalculoDP
   end
   object Label8: TLabel
     Position.X = 360.000000000000000000
-    Position.Y = 288.000000000000000000
+    Position.Y = 328.000000000000000000
     Size.Width = 17.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
@@ -168,7 +167,7 @@ object FCalculoDP: TFCalculoDP
   end
   object CheckBoxPossuiEstimativa: TCheckBox
     Position.X = 288.000000000000000000
-    Position.Y = 240.000000000000000000
+    Position.Y = 280.000000000000000000
     Size.Width = 73.000000000000000000
     Size.Height = 19.000000000000000000
     Size.PlatformDefault = False
@@ -176,25 +175,9 @@ object FCalculoDP: TFCalculoDP
     Text = 'Possui'
     OnChange = CheckBoxPossuiEstimativaChange
   end
-  object PopupBoxSucesso: TPopupBox
-    Position.X = 376.000000000000000000
-    Position.Y = 192.000000000000000000
-    Size.Width = 100.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 21
-  end
-  object PopupBoxSignificancia: TPopupBox
-    Position.X = 376.000000000000000000
-    Position.Y = 144.000000000000000000
-    Size.Width = 100.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 20
-    OnExit = EditAExit
-  end
   object Label9: TLabel
     Align = Scale
+    Anchors = [akLeft, akTop]
     AutoTranslate = False
     Position.X = 186.000000000000000000
     Position.Y = 7.000000000000000000
@@ -203,11 +186,11 @@ object FCalculoDP: TFCalculoDP
     Size.PlatformDefault = False
     StyleLookup = 'Label9Style1'
     Text = 'C'#225'lculo de Intervalo de confian'#231'a'
-    TabOrder = 24
+    TabOrder = 22
   end
   object ButtonCalcularN: TButton
     Position.X = 376.000000000000000000
-    Position.Y = 336.000000000000000000
+    Position.Y = 376.000000000000000000
     Size.Width = 97.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
@@ -215,12 +198,37 @@ object FCalculoDP: TFCalculoDP
     Text = 'Calcular N'
     OnClick = ButtonCalcularNClick
   end
-  object PopupMenuSucesso: TPopupMenu
-    Left = 480
-    Top = 184
+  object ComboBoxSignificancia: TComboBox
+    Items.Strings = (
+      'Signific'#226'ncia'
+      'Confian'#231'a')
+    Position.X = 376.000000000000000000
+    Position.Y = 184.000000000000000000
+    TabOrder = 24
+    OnChange = EditAExit
   end
-  object PopupMenuSignificancia: TPopupMenu
-    Left = 480
-    Top = 136
+  object ComboBoxSucesso: TComboBox
+    Items.Strings = (
+      'Sucesso'
+      'Falha')
+    Position.X = 376.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 23
+  end
+  object Label10: TLabel
+    Position.X = 200.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'N'#250'mero de amostras necess'#225'rio'
+    TabOrder = 25
+  end
+  object EditNA: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 26
+    ReadOnly = True
+    Position.X = 376.000000000000000000
+    Position.Y = 88.000000000000000000
   end
 end
