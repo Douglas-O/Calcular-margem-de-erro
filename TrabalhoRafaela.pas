@@ -10,6 +10,7 @@ uses
 
 type
   TFCalculoDP = class(TForm)
+    Panel1: TPanel;
     ButtonCalcularE: TButton;
     ButtonLimpar: TButton;
     EditN: TEdit;
@@ -36,11 +37,11 @@ type
     Label10: TLabel;
     EditNA: TEdit;
     procedure EditAExit(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure ButtonCalcularEClick(Sender: TObject);
     procedure CheckBoxPossuiEstimativaChange(Sender: TObject);
     procedure ButtonLimparClick(Sender: TObject);
     procedure ButtonCalcularNClick(Sender: TObject);
+    procedure ComboBoxSucessoChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,39 +57,40 @@ implementation
 
 {$R *.fmx}
 {$R *.XLgXhdpiTb.fmx ANDROID}
-
-procedure TFCalculoDP.FormCreate(Sender: TObject);
-begin
-
-  //Set the first item to be shown
-  ComboBoxSignificancia.ItemIndex := 0;
-  ComboBoxSucesso.ItemIndex := 0;
-end;
-
+{$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TFCalculoDP.ButtonCalcularEClick(Sender: TObject);
 var
-  p, q, n, e, z, estimativaP, i1, i2, aux : Double;
+  p, q, n, e, z, estimativaP, i1, i2, aux, dp : Double;
   stringaux: string;
 begin
   n := StrToFloat(EditN.Text);
+  z := StrToFloat(EditZ.Text);
   if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     p := StrToFloat(EditPQ.Text);
-    p := p/n;
+    p := p/n;{
     p := p*10000;
     p := round(p);
-    p := p/10000;
+    p := p/10000;}
     q := 1-p;
+    e := z * (Sqrt((p*q)/n));
+  end
+  else if ComboBoxSucesso.ItemIndex = 1 then
+  begin
+    q := StrToFloat(EditPQ.Text);
+    q := q/n;{
+    q := q*10000;
+    q := round(q);
+    q := q/10000;}
+    p := 1-q;
+    e := z * (Sqrt((p*q)/n));
   end
   else
   begin
-    q := StrToFloat(EditPQ.Text);
-    q := q/n;
-    q := q*10000;
-    q := round(q);
-    q := q/10000;
-    p := 1-q;
+    dp := StrToFloat(EditPQ.Text);
+    dp := dp/100;
+    e := z * (dp/Sqrt(n));
   end;
   if (checkBoxPossuiEstimativaBool) then
     begin
@@ -99,11 +101,9 @@ begin
     end
     else
       begin
-        i1 := P;
-        i2 := P;
+        i1 := p;
+        i2 := p;
       end;
-  z := StrToFloat(EditZ.Text);
-  e := z * (Sqrt((p*q)/n));
   aux := e * 10000;
   aux := round(aux);
   aux := trunc(aux);
@@ -212,6 +212,24 @@ begin
     begin
       checkBoxPossuiEstimativaBool := True;
     end;
+
+end;
+
+procedure TFCalculoDP.ComboBoxSucessoChange(Sender: TObject);
+begin
+  if (ComboBoxSucesso.ItemIndex = 0) then
+  begin
+    Label5.Text := 'P';
+  end
+  else if (ComboBoxSucesso.ItemIndex = 1) then
+  begin
+    Label5.Text := 'Q';
+  end
+  else
+  begin
+    Label5.Text := 'Desvio Padrão';
+  end;
+
 
 end;
 
