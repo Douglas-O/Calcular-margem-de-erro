@@ -3,7 +3,7 @@ object FCalculoDP: TFCalculoDP
   Top = 106
   Caption = 'C'#225'lculo de intervalo de confian'#231'a'
   ClientHeight = 432
-  ClientWidth = 380
+  ClientWidth = 381
   Position = Designed
   StyleBook = StyleBook1
   FormFactor.Width = 320
