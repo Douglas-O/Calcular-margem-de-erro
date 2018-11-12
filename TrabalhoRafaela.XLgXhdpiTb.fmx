@@ -3,46 +3,15 @@ inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
   ClientWidth = 800
   DesignerMasterStyle = 3
   inherited Panel1: TPanel
-    inherited EditN: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditE: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditA: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditZ: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditPQ: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditI1: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditI2: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditEstimativa: TEdit
-      Size.Height = 32.000000000000000000
-    end
+    Position.Y = 8.000000000000000000
     inherited Label1: TLabel
       Anchors = [akLeft, akTop, akRight]
       Position.X = 328.000000000000000000
+      Size.Width = 23.000000000000000000
       Size.Height = 22.000000000000000000
     end
-    inherited Label9: TLabel
-      StyledSettings = [Family, Style, FontColor]
-    end
-    inherited ComboBoxSignificancia: TComboBox
-      Size.Height = 32.000000000000000000
-    end
-    inherited ComboBoxSucesso: TComboBox
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditNA: TEdit
-      Size.Height = 32.000000000000000000
+    inherited Panel2: TPanel
+      Anchors = [akLeft, akTop, akRight]
     end
   end
 end

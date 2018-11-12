@@ -1,0 +1,9 @@
+inherited FCalculoDP_Windows: TFCalculoDP_Windows
+  DesignerMasterStyle = 0
+  inherited Panel1: TPanel
+    Position.Y = 8.000000000000000000
+    inherited Panel2: TPanel
+      Anchors = [akLeft, akTop, akRight]
+    end
+  end
+end

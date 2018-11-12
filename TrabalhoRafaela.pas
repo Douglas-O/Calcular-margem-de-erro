@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ExtCtrls,
   FMX.StdCtrls, FMX.Edit, FMX.Controls.Presentation, FMX.Menus, Math,
-  FMX.ListBox;
+  FMX.ListBox, FMX.Colors, FMX.Objects;
 
 type
   TFCalculoDP = class(TForm)
@@ -36,12 +36,15 @@ type
     ComboBoxSucesso: TComboBox;
     Label10: TLabel;
     EditNA: TEdit;
+    Panel2: TPanel;
+    StyleBook1: TStyleBook;
     procedure EditAExit(Sender: TObject);
     procedure ButtonCalcularEClick(Sender: TObject);
     procedure CheckBoxPossuiEstimativaChange(Sender: TObject);
     procedure ButtonLimparClick(Sender: TObject);
     procedure ButtonCalcularNClick(Sender: TObject);
     procedure ComboBoxSucessoChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,6 +60,8 @@ implementation
 
 {$R *.fmx}
 {$R *.XLgXhdpiTb.fmx ANDROID}
+{$R *.Windows.fmx MSWINDOWS}
+{$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.NmXhdpiPh.fmx ANDROID}
 
 procedure TFCalculoDP.ButtonCalcularEClick(Sender: TObject);
@@ -317,6 +322,11 @@ begin
      end;
     end;
 
+end;
+
+procedure TFCalculoDP.FormCreate(Sender: TObject);
+begin
+  //Panel2.ParentedVisible := false;
 end;
 
 end.
