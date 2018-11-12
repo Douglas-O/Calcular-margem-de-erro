@@ -2,12 +2,13 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2018/11/04 23:45:21.000.878,=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/11/05 00:08:19.000.947,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabalhoRafaela.pas=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/11/05 00:08:19.000.947,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabalhoRafaela.fmx=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2018/11/05 00:08:41.000.255,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/11/05 00:08:19.000.947,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabalhoRafaela.pas</Transaction>
+    <Transaction>2018/11/05 00:08:19.000.947,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabalhoRafaela.fmx</Transaction>
+    <Transaction>2018/11/05 00:08:41.000.255,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/05 11:35:32.000.468,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/05 12:23:47.000.076,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/05 12:29:21.000.248,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/06 12:34:01.000.515,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
-  </Transactions>
+  </Transactions>  <ActiveMobileDevice>   <NoProfile Android=""/>
+  </ActiveMobileDevice>
 </BorlandProject>

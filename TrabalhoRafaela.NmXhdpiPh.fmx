@@ -11,12 +11,14 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       Position.Y = 466.642395019531300000
       Size.Width = 95.584426879882810000
       Size.Height = 27.671508789062500000
+      TintColor = claDarkviolet
     end
     inherited ButtonLimpar: TButton
       Position.X = 157.922073364257800000
       Position.Y = 508.149658203125000000
       Size.Width = 81.038955688476560000
       Size.Height = 27.671508789062500000
+      TintColor = claDarkviolet
     end
     inherited EditN: TEdit
       Position.X = 62.337661743164060000
@@ -93,6 +95,7 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       Position.Y = 334.573791503906300000
       Size.Width = 144.415588378906300000
       Size.Height = 21.382507324218750000
+      TextSettings.Font.Size = 13.000000000000000000
     end
     inherited Label7: TLabel
       Position.X = 62.337661743164060000
@@ -111,12 +114,14 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       Position.Y = 354.698516845703100000
       Size.Width = 68.571426391601560000
       Size.Height = 23.898132324218750000
+      TextSettings.Font.Size = 13.000000000000000000
     end
     inherited ButtonCalcularN: TButton
       Position.X = 238.961044311523400000
       Position.Y = 466.642395019531300000
       Size.Width = 95.584426879882810000
       Size.Height = 27.671508789062500000
+      TintColor = claDarkviolet
     end
     inherited ComboBoxSignificancia: TComboBox
       Position.X = 238.961044311523400000
@@ -133,7 +138,8 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       Position.X = 62.000000000000000000
       Position.Y = 74.000000000000000000
       Size.Width = 188.000000000000000000
-      Size.Height = 44.000000000000000000
+      Size.Height = 32.000000000000000000
+      TextSettings.Font.Size = 13.000000000000000000
     end
     inherited EditNA: TEdit
       Position.X = 62.337661743164060000
@@ -144,6 +150,9 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       Align = Top
       Size.Width = 400.000000000000000000
       Size.Height = 68.241485595703130000
+      inherited Label9: TLabel
+        TextSettings.Font.Size = 13.000000000000000000
+      end
     end
   end
 end

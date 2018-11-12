@@ -2,8 +2,29 @@ inherited FCalculoDP_Windows: TFCalculoDP_Windows
   DesignerMasterStyle = 0
   inherited Panel1: TPanel
     Position.Y = 8.000000000000000000
+    inherited ButtonCalcularE: TButton
+      TintColor = claDarkviolet
+    end
+    inherited ButtonLimpar: TButton
+      TintColor = claDarkviolet
+    end
+    inherited Label6: TLabel
+      TextSettings.Font.Size = 13.000000000000000000
+    end
+    inherited CheckBoxPossuiEstimativa: TCheckBox
+      TextSettings.Font.Size = 13.000000000000000000
+    end
+    inherited ButtonCalcularN: TButton
+      TintColor = claDarkviolet
+    end
+    inherited Label10: TLabel
+      TextSettings.Font.Size = 13.000000000000000000
+    end
     inherited Panel2: TPanel
       Anchors = [akLeft, akTop, akRight]
+      inherited Label9: TLabel
+        TextSettings.Font.Size = 13.000000000000000000
+      end
     end
   end
 end
