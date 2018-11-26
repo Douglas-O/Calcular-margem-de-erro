@@ -12,67 +12,67 @@ object FCalculoDP: TFCalculoDP
   OnCreate = FormCreate
   Left = 234
   Top = 106
-  DesignerMasterStyle = 3
+  DesignerMasterStyle = 0
   object Panel1: TPanel
-    Anchors = [akLeft, akTop, akRight, akBottom]
+    Align = Client
     Size.Width = 381.000000000000000000
-    Size.Height = 460.000000000000000000
+    Size.Height = 411.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'Panel1Style1'
     TabOrder = 2
     object ButtonCalcularE: TButton
       Align = Scale
       Position.X = 59.376621246337890000
-      Position.Y = 354.802581787109400000
+      Position.Y = 317.008392333984400000
       Size.Width = 91.044158935546880000
-      Size.Height = 21.039550781250000000
+      Size.Height = 18.798370361328130000
       Size.PlatformDefault = False
-      TabOrder = 1
+      TabOrder = 2
       Text = 'Calcular E'
       OnClick = ButtonCalcularEClick
     end
     object ButtonLimpar: TButton
       Align = Scale
-      Position.X = 150.420776367187500000
-      Position.Y = 386.361877441406300000
-      Size.Width = 77.189605712890630000
-      Size.Height = 21.039550781250000000
+      Position.X = 228.000000000000000000
+      Position.Y = 349.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 2
+      TabOrder = 3
       Text = 'Limpar'
       OnClick = ButtonLimparClick
     end
     object EditN: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 9
+      TabOrder = 10
       Text = '0'
       Position.X = 59.376621246337890000
-      Position.Y = 131.018722534179700000
+      Position.Y = 117.062385559082000000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591300964355470000
       Size.PlatformDefault = False
     end
     object EditE: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 10
+      TabOrder = 11
       Text = '0'
       Position.X = 227.610382080078100000
-      Position.Y = 131.018722534179700000
+      Position.Y = 117.062385559082000000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591300964355470000
       Size.PlatformDefault = False
     end
     object EditA: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 8
+      TabOrder = 9
       Text = '0'
       Position.X = 59.376621246337890000
-      Position.Y = 177.879486083984400000
+      Position.Y = 158.931457519531300000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
       OnChange = EditAExit
       OnExit = EditAExit
@@ -80,160 +80,160 @@ object FCalculoDP: TFCalculoDP
     object EditZ: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 7
+      TabOrder = 8
       CanFocus = False
       ReadOnly = True
       Text = '0'
       Position.X = 227.610382080078100000
-      Position.Y = 269.688171386718800000
+      Position.Y = 240.960525512695300000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591293334960940000
       Size.PlatformDefault = False
     end
     object EditPQ: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 6
+      TabOrder = 7
       Text = '0'
       Position.X = 59.376621246337890000
-      Position.Y = 223.783843994140600000
+      Position.Y = 199.945999145507800000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
     end
     object EditI1: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 5
+      TabOrder = 6
       ReadOnly = True
       Text = '0'
       Position.X = 59.376621246337890000
-      Position.Y = 316.548889160156300000
+      Position.Y = 282.829559326171900000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
     end
     object EditI2: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 4
+      TabOrder = 5
       ReadOnly = True
       Text = '0'
       Position.X = 226.820983886718800000
-      Position.Y = 316.548889160156300000
+      Position.Y = 282.829559326171900000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
     end
     object EditEstimativa: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 3
+      TabOrder = 4
       Position.X = 59.376621246337890000
-      Position.Y = 269.688171386718800000
+      Position.Y = 240.960525512695300000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591293334960940000
       Size.PlatformDefault = False
     end
     object Label1: TLabel
       Align = Scale
       Position.X = 59.376621246337890000
-      Position.Y = 115.717292785644500000
+      Position.Y = 103.390884399414100000
       Size.Width = 26.719478607177730000
-      Size.Height = 15.301475524902340000
+      Size.Height = 13.671539306640630000
       Size.PlatformDefault = False
       Text = 'N'
-      TabOrder = 11
+      TabOrder = 12
     end
     object Label2: TLabel
       Align = Scale
       Position.X = 227.610382080078100000
-      Position.Y = 115.717292785644500000
+      Position.Y = 103.390884399414100000
       Size.Width = 23.750656127929690000
-      Size.Height = 16.257820129394530000
+      Size.Height = 14.526008605957030000
       Size.PlatformDefault = False
       Text = 'E'
-      TabOrder = 12
+      TabOrder = 13
     end
     object Label3: TLabel
       Align = Scale
       Position.X = 59.376621246337890000
-      Position.Y = 162.578018188476600000
+      Position.Y = 145.259933471679700000
       Size.Width = 26.719478607177730000
-      Size.Height = 16.257751464843750000
+      Size.Height = 14.525955200195310000
       Size.PlatformDefault = False
       Text = 'A'
-      TabOrder = 18
+      TabOrder = 19
     end
     object Label4: TLabel
       Align = Scale
       Position.X = 227.610382080078100000
-      Position.Y = 254.386795043945300000
+      Position.Y = 227.289077758789100000
       Size.Width = 24.740264892578130000
-      Size.Height = 16.257858276367190000
+      Size.Height = 14.526046752929690000
       Size.PlatformDefault = False
       Text = 'Z'
-      TabOrder = 17
+      TabOrder = 18
     end
     object Label5: TLabel
       Align = Scale
       Position.X = 59.376621246337890000
-      Position.Y = 208.482391357421900000
+      Position.Y = 186.274490356445300000
       Size.Width = 131.618179321289100000
-      Size.Height = 16.257751464843750000
+      Size.Height = 14.525955200195310000
       Size.PlatformDefault = False
       Text = 'P'
-      TabOrder = 16
+      TabOrder = 17
     end
     object Label6: TLabel
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
       Position.X = 59.376621246337890000
-      Position.Y = 254.386795043945300000
+      Position.Y = 227.289077758789100000
       Size.Width = 137.555847167968800000
-      Size.Height = 16.257858276367190000
+      Size.Height = 14.526046752929690000
       Size.PlatformDefault = False
       Text = 'Estimativa Pr'#233'via'
-      TabOrder = 15
+      TabOrder = 16
     end
     object Label7: TLabel
       Align = Scale
       Position.X = 59.376621246337890000
-      Position.Y = 301.247436523437500000
+      Position.Y = 269.158050537109400000
       Size.Width = 26.719478607177730000
-      Size.Height = 16.257781982421880000
+      Size.Height = 14.525970458984380000
       Size.PlatformDefault = False
       Text = 'I1'
-      TabOrder = 14
+      TabOrder = 15
     end
     object Label8: TLabel
       Align = Scale
       Position.X = 227.610382080078100000
-      Position.Y = 301.247436523437500000
+      Position.Y = 269.158050537109400000
       Size.Width = 24.740264892578130000
-      Size.Height = 16.257781982421880000
+      Size.Height = 14.525970458984380000
       Size.PlatformDefault = False
       Text = 'I2'
-      TabOrder = 13
+      TabOrder = 14
     end
     object CheckBoxPossuiEstimativa: TCheckBox
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
       Position.X = 149.431167602539100000
-      Position.Y = 269.688171386718800000
+      Position.Y = 240.960525512695300000
       Size.Width = 65.314285278320310000
-      Size.Height = 18.170379638671880000
+      Size.Height = 16.234848022460940000
       Size.PlatformDefault = False
-      TabOrder = 19
+      TabOrder = 21
       Text = 'Possui'
       OnChange = CheckBoxPossuiEstimativaChange
     end
     object ButtonCalcularN: TButton
       Align = Scale
       Position.X = 227.610382080078100000
-      Position.Y = 354.802581787109400000
+      Position.Y = 317.008392333984400000
       Size.Width = 91.044158935546880000
-      Size.Height = 21.039550781250000000
+      Size.Height = 18.798370361328130000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = 'Calcular N'
@@ -246,11 +246,11 @@ object FCalculoDP: TFCalculoDP
         'Confian'#231'a')
       ItemIndex = 0
       Position.X = 227.610382080078100000
-      Position.Y = 177.879486083984400000
+      Position.Y = 158.931457519531300000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
-      TabOrder = 25
+      TabOrder = 27
       OnChange = EditAExit
     end
     object ComboBoxSucesso: TComboBox
@@ -261,42 +261,43 @@ object FCalculoDP: TFCalculoDP
         'D. P.')
       ItemIndex = 0
       Position.X = 227.610382080078100000
-      Position.Y = 223.783843994140600000
+      Position.Y = 199.945999145507800000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591308593750000000
       Size.PlatformDefault = False
-      TabOrder = 22
+      TabOrder = 24
       OnChange = ComboBoxSucessoChange
     end
     object Label10: TLabel
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
       Position.X = 59.000000000000000000
-      Position.Y = 69.812919616699220000
+      Position.Y = 62.376327514648440000
       Size.Width = 179.000000000000000000
-      Size.Height = 15.301452636718750000
+      Size.Height = 13.671516418457030000
       Size.PlatformDefault = False
       Text = 'N'#250'mero de amostras necess'#225'rio'
-      TabOrder = 23
+      TabOrder = 25
     end
     object EditNA: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
-      TabOrder = 24
+      TabOrder = 26
       ReadOnly = True
       Position.X = 59.376621246337890000
-      Position.Y = 85.114372253417970000
+      Position.Y = 76.047843933105470000
       Size.Width = 91.044158935546880000
-      Size.Height = 32.000000000000000000
+      Size.Height = 28.591300964355470000
       Size.PlatformDefault = False
     end
     object Panel2: TPanel
+      Align = Top
       ClipParent = True
       Size.Width = 381.000000000000000000
       Size.Height = 49.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'Panel2Style1'
-      TabOrder = 26
+      TabOrder = 28
       object Label9: TLabel
         Align = Center
         AutoTranslate = False
@@ -309,6 +310,29 @@ object FCalculoDP: TFCalculoDP
         Text = 'C'#225'lculo de Intervalo de confian'#231'a'
         TabOrder = 0
       end
+    end
+    object CheckBoxPorcentoPQ: TCheckBox
+      Align = Scale
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 149.000000000000000000
+      Position.Y = 209.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 20
+      Text = '%'
+      OnChange = CheckBoxPorcentoPQChange
+    end
+    object ButtonCalcularDP: TButton
+      Align = Scale
+      Position.X = 59.000000000000000000
+      Position.Y = 349.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Calcular DP'
+      OnClick = ButtonCalcularDPClick
     end
   end
   object StyleBook1: TStyleBook

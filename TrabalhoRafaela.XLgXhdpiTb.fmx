@@ -3,18 +3,43 @@ inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
   ClientWidth = 800
   DesignerMasterStyle = 3
   inherited Panel1: TPanel
-    Position.Y = 8.000000000000000000
+    Size.Width = 800.000000000000000000
+    Size.Height = 1255.000000000000000000
     inherited ButtonCalcularE: TButton
       TintColor = claDarkviolet
     end
     inherited ButtonLimpar: TButton
       TintColor = claDarkviolet
     end
+    inherited EditN: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditE: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditA: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditZ: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditPQ: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditI1: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditI2: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited EditEstimativa: TEdit
+      Size.Height = 32.000000000000000000
+    end
     inherited Label1: TLabel
       Anchors = [akLeft, akTop, akRight]
-      Position.X = 328.000000000000000000
-      Size.Width = 23.000000000000000000
-      Size.Height = 22.000000000000000000
+      Position.X = 5058471.000000000000000000
+      Size.Width = 6816599.000000000000000000
+      Size.Height = 39439516.000000000000000000
     end
     inherited Label6: TLabel
       TextSettings.Font.Size = 13.000000000000000000
@@ -25,11 +50,20 @@ inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
     inherited ButtonCalcularN: TButton
       TintColor = claDarkviolet
     end
+    inherited ComboBoxSignificancia: TComboBox
+      Size.Height = 32.000000000000000000
+    end
+    inherited ComboBoxSucesso: TComboBox
+      Size.Height = 32.000000000000000000
+    end
     inherited Label10: TLabel
       TextSettings.Font.Size = 13.000000000000000000
     end
+    inherited EditNA: TEdit
+      Size.Height = 32.000000000000000000
+    end
     inherited Panel2: TPanel
-      Anchors = [akLeft, akTop, akRight]
+      Size.Width = 800.000000000000000000
       inherited Label9: TLabel
         TextSettings.Font.Size = 13.000000000000000000
       end

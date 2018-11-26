@@ -38,6 +38,8 @@ type
     EditNA: TEdit;
     Panel2: TPanel;
     StyleBook1: TStyleBook;
+    CheckBoxPorcentoPQ: TCheckBox;
+    ButtonCalcularDP: TButton;
     procedure EditAExit(Sender: TObject);
     procedure ButtonCalcularEClick(Sender: TObject);
     procedure CheckBoxPossuiEstimativaChange(Sender: TObject);
@@ -45,6 +47,8 @@ type
     procedure ButtonCalcularNClick(Sender: TObject);
     procedure ComboBoxSucessoChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure CheckBoxPorcentoPQChange(Sender: TObject);
+    procedure ButtonCalcularDPClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +57,7 @@ type
 
 var
   checkBoxPossuiEstimativaBool : boolean = False;
+  checkBoxPorcentagemPQ : boolean = False;
   FCalculoDP: TFCalculoDP;
 
 
@@ -64,6 +69,37 @@ implementation
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.NmXhdpiPh.fmx ANDROID}
 
+procedure TFCalculoDP.ButtonCalcularDPClick(Sender: TObject);
+var
+  n, e, z, estimativaP, i1, i2, aux, dp : Double;
+  stringaux: string;
+begin
+  n := StrToFloat(EditN.Text);
+  z := StrToFloat(EditZ.Text);
+  if (ComboBoxSucesso.ItemIndex = 0) or (ComboBoxSucesso.ItemIndex = 1) then
+  begin
+
+  end
+  else
+  begin
+    e := StrToFloat(EditE.Text);
+    e := e/100;
+    //dp := z * (dp/Sqrt(n));
+    dp := e*Sqrt(n)/z;
+    aux := dp * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditPQ.Text := stringaux;
+    i1 := i1 - e;
+    i2 := i2 + e;
+    stringaux:= '';
+    EditI1.Text := stringaux;
+    EditI2.Text := stringaux;
+  end;
+end;
+
 procedure TFCalculoDP.ButtonCalcularEClick(Sender: TObject);
 var
   p, q, n, e, z, estimativaP, i1, i2, aux, dp : Double;
@@ -74,30 +110,13 @@ begin
   if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     p := StrToFloat(EditPQ.Text);
-    p := p/n;{
-    p := p*10000;
-    p := round(p);
-    p := p/10000;}
+     if checkBoxPorcentagemPQ then
+      p := p/100
+    else
+      p := p/n;
     q := 1-p;
     e := z * (Sqrt((p*q)/n));
-  end
-  else if ComboBoxSucesso.ItemIndex = 1 then
-  begin
-    q := StrToFloat(EditPQ.Text);
-    q := q/n;{
-    q := q*10000;
-    q := round(q);
-    q := q/10000;}
-    p := 1-q;
-    e := z * (Sqrt((p*q)/n));
-  end
-  else
-  begin
-    dp := StrToFloat(EditPQ.Text);
-    dp := dp/100;
-    e := z * (dp/Sqrt(n));
-  end;
-  if (checkBoxPossuiEstimativaBool) then
+    if (checkBoxPossuiEstimativaBool) then
     begin
       estimativaP := StrToFloat(EditEstimativa.Text);
       estimativaP := estimativaP/100;
@@ -109,26 +128,108 @@ begin
         i1 := p;
         i2 := p;
       end;
-  aux := e * 10000;
-  aux := round(aux);
-  aux := trunc(aux);
-  aux := aux/100;
-  stringaux := FloatToStr(aux)+ '%';
-  EditE.Text := stringaux;
-  i1 := i1 - e;
-  i2 := i2 + e;
-  aux := i1 * 10000;
-  aux := round(aux);
-  aux := trunc(aux);
-  aux := aux/100;
-  stringaux := FloatToStr(aux)+ '%';
-  EditI1.Text := stringaux;
-  aux := i2 * 10000;
-  aux := round(aux);
-  aux := trunc(aux);
-  aux := aux/100;
-  stringaux := FloatToStr(aux)+ '%';
-  EditI2.Text := stringaux;
+    aux := e * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditE.Text := stringaux;
+    i1 := i1 - e;
+    i2 := i2 + e;
+    aux := i1 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux)+ '%';
+    EditI1.Text := stringaux;
+    aux := i2 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux)+ '%';
+    EditI2.Text := stringaux;
+  end
+  else if ComboBoxSucesso.ItemIndex = 1 then
+  begin
+    q := StrToFloat(EditPQ.Text);
+     if checkBoxPorcentagemPQ then
+      q := q/100
+    else
+      q := q/n;
+    p := 1-q;
+    e := z * (Sqrt((p*q)/n));
+    if (checkBoxPossuiEstimativaBool) then
+    begin
+      estimativaP := StrToFloat(EditEstimativa.Text);
+      estimativaP := estimativaP/100;
+      i1 := estimativaP;
+      i2 := estimativaP;
+    end
+    else
+      begin
+        i1 := p;
+        i2 := p;
+      end;
+    aux := e * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditE.Text := stringaux;
+    i1 := i1 - e;
+    i2 := i2 + e;
+    aux := i1 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux)+ '%';
+    EditI1.Text := stringaux;
+    aux := i2 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux)+ '%';
+    EditI2.Text := stringaux;
+  end
+  else
+  begin
+    dp := StrToFloat(EditPQ.Text);
+    dp := dp/100;
+    e := z * (dp/Sqrt(n));
+    p := 0.5;
+    if (checkBoxPossuiEstimativaBool) then
+    begin
+      estimativaP := StrToFloat(EditEstimativa.Text);
+      estimativaP := estimativaP/100;
+      i1 := estimativaP;
+      i2 := estimativaP;
+    end
+    else
+      begin
+        i1 := p;
+        i2 := p;
+      end;
+    aux := e * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditE.Text := stringaux;
+    i1 := i1 - e;
+    i2 := i2 + e;
+    aux := i1 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditI1.Text := stringaux;
+    aux := i2 * 10000;
+    aux := round(aux);
+    aux := trunc(aux);
+    aux := aux/100;
+    stringaux := FloatToStr(aux);
+    EditI2.Text := stringaux;
+  end;
 end;
 
 procedure TFCalculoDP.ButtonCalcularNClick(Sender: TObject);
@@ -139,8 +240,11 @@ begin
   n := StrToFloat(EditN.Text);
   if (ComboBoxSucesso.ItemIndex = 0) then
   begin
-    p := StrToFloat(EditPQ.Text);
-    p := p/n;
+     p := StrToFloat(EditPQ.Text);
+     if checkBoxPorcentagemPQ then
+      p := p/100
+    else
+      p := p/n;
     p := p*10000;
     p := round(p);
     p := p/10000;
@@ -149,7 +253,10 @@ begin
   else
   begin
     q := StrToFloat(EditPQ.Text);
-    q := q/n;
+     if checkBoxPorcentagemPQ then
+      q := q/100
+    else
+      q := q/n;
     q := q*10000;
     q := round(q);
     q := q/10000;
@@ -207,6 +314,19 @@ begin
   EditNA.Text := '';
 end;
 
+procedure TFCalculoDP.CheckBoxPorcentoPQChange(Sender: TObject);
+begin
+  if checkBoxPorcentagemPQ then
+  begin
+    checkBoxPorcentagemPQ := False;
+  end
+    else
+    begin
+      checkBoxPorcentagemPQ := True;
+    end;
+
+end;
+
 procedure TFCalculoDP.CheckBoxPossuiEstimativaChange(Sender: TObject);
 begin
   if checkBoxPossuiEstimativaBool then
@@ -225,14 +345,17 @@ begin
   if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     Label5.Text := 'P';
+    checkboxPorcentoPQ.Visible:= true;
   end
   else if (ComboBoxSucesso.ItemIndex = 1) then
   begin
     Label5.Text := 'Q';
+    checkboxPorcentoPQ.Visible:= true;
   end
   else
   begin
     Label5.Text := 'Desvio Padrão';
+    checkboxPorcentoPQ.Visible:= false;
   end;
 
 

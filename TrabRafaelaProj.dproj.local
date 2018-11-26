@@ -9,6 +9,8 @@
     <Transaction>2018/11/05 12:23:47.000.076,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/05 12:29:21.000.248,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
     <Transaction>2018/11/06 12:34:01.000.515,C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj=C:\Users\usuario\Documents\Embarcadero\Studio\Projects\TrabRafaelaProj.dproj</Transaction>
-  </Transactions>  <ActiveMobileDevice>   <NoProfile Android=""/>
-  </ActiveMobileDevice>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android=""/>
+	</ActiveMobileDevice>
 </BorlandProject>
