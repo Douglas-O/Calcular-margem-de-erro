@@ -12,7 +12,7 @@ object FCalculoDP: TFCalculoDP
   OnCreate = FormCreate
   Left = 234
   Top = 106
-  DesignerMasterStyle = 0
+  DesignerMasterStyle = 3
   object Panel1: TPanel
     Align = Client
     Size.Width = 381.000000000000000000
@@ -50,7 +50,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 117.062385559082000000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591300964355470000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditE: TEdit
@@ -61,7 +61,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 227.610382080078100000
       Position.Y = 117.062385559082000000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591300964355470000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditA: TEdit
@@ -72,7 +72,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 158.931457519531300000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       OnChange = EditAExit
       OnExit = EditAExit
@@ -87,7 +87,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 227.610382080078100000
       Position.Y = 240.960525512695300000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591293334960940000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditPQ: TEdit
@@ -98,7 +98,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 199.945999145507800000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditI1: TEdit
@@ -110,7 +110,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 282.829559326171900000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditI2: TEdit
@@ -122,7 +122,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 226.820983886718800000
       Position.Y = 282.829559326171900000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object EditEstimativa: TEdit
@@ -132,7 +132,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 240.960525512695300000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591293334960940000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object Label1: TLabel
@@ -248,7 +248,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 227.610382080078100000
       Position.Y = 158.931457519531300000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 27
       OnChange = EditAExit
@@ -263,7 +263,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 227.610382080078100000
       Position.Y = 199.945999145507800000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591308593750000000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 24
       OnChange = ComboBoxSucessoChange
@@ -287,7 +287,7 @@ object FCalculoDP: TFCalculoDP
       Position.X = 59.376621246337890000
       Position.Y = 76.047843933105470000
       Size.Width = 91.044158935546880000
-      Size.Height = 28.591300964355470000
+      Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
     object Panel2: TPanel
@@ -325,13 +325,15 @@ object FCalculoDP: TFCalculoDP
     end
     object ButtonCalcularDP: TButton
       Align = Scale
+      StyledSettings = [Family, Style, FontColor]
       Position.X = 59.000000000000000000
       Position.Y = 349.000000000000000000
-      Size.Width = 91.000000000000000000
+      Size.Width = 94.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Calcular DP'
+      TextSettings.Font.Size = 16.000000000000000000
       OnClick = ButtonCalcularDPClick
     end
   end

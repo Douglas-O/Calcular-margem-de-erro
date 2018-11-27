@@ -11,30 +11,6 @@ inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
     inherited ButtonLimpar: TButton
       TintColor = claDarkviolet
     end
-    inherited EditN: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditE: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditA: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditZ: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditPQ: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditI1: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditI2: TEdit
-      Size.Height = 32.000000000000000000
-    end
-    inherited EditEstimativa: TEdit
-      Size.Height = 32.000000000000000000
-    end
     inherited Label1: TLabel
       Anchors = [akLeft, akTop, akRight]
       Position.X = 5058471.000000000000000000
@@ -50,17 +26,8 @@ inherited FCalculoDP_XLgXhdpiTb: TFCalculoDP_XLgXhdpiTb
     inherited ButtonCalcularN: TButton
       TintColor = claDarkviolet
     end
-    inherited ComboBoxSignificancia: TComboBox
-      Size.Height = 32.000000000000000000
-    end
-    inherited ComboBoxSucesso: TComboBox
-      Size.Height = 32.000000000000000000
-    end
     inherited Label10: TLabel
       TextSettings.Font.Size = 13.000000000000000000
-    end
-    inherited EditNA: TEdit
-      Size.Height = 32.000000000000000000
     end
     inherited Panel2: TPanel
       Size.Width = 800.000000000000000000

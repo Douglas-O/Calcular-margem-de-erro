@@ -71,9 +71,10 @@ implementation
 
 procedure TFCalculoDP.ButtonCalcularDPClick(Sender: TObject);
 var
-  n, e, z, estimativaP, i1, i2, aux, dp : Double;
+  n, e, z, i1, i2, aux, dp : Double;
   stringaux: string;
 begin
+  ComboBoxSucesso.ItemIndex := 2;
   n := StrToFloat(EditN.Text);
   z := StrToFloat(EditZ.Text);
   if (ComboBoxSucesso.ItemIndex = 0) or (ComboBoxSucesso.ItemIndex = 1) then
@@ -84,7 +85,6 @@ begin
   begin
     e := StrToFloat(EditE.Text);
     e := e/100;
-    //dp := z * (dp/Sqrt(n));
     dp := e*Sqrt(n)/z;
     aux := dp * 10000;
     aux := round(aux);
@@ -234,8 +234,7 @@ end;
 
 procedure TFCalculoDP.ButtonCalcularNClick(Sender: TObject);
 var
- p, q, n, e, z, estimativaP, i1, i2, aux : Double;
- stringaux: string;
+ p, q, n, e, z, dp, estimativaP : Double;
 begin
   n := StrToFloat(EditN.Text);
   if (ComboBoxSucesso.ItemIndex = 0) then
@@ -250,7 +249,7 @@ begin
     p := p/10000;
     q := 1-p;
   end
-  else
+  else if (ComboBoxSucesso.ItemIndex = 0) then
   begin
     q := StrToFloat(EditPQ.Text);
      if checkBoxPorcentagemPQ then
@@ -261,38 +260,19 @@ begin
     q := round(q);
     q := q/10000;
     p := 1-q;
+  end
+  else
+  begin
+    dp := StrToFloat(EditPQ.Text);
+    dp := dp/100;
   end;
-  if (checkBoxPossuiEstimativaBool) then
-    begin
-      estimativaP := StrToFloat(EditEstimativa.Text);
-      estimativaP := estimativaP/100;
-      i1 := estimativaP;
-      i2 := estimativaP;
-    end
-    else
-      begin
-        i1 := P;
-        i2 := P;
-      end;
   z := StrToFloat(EditZ.Text);
   e := StrToFloat(EditE.Text);
   e := e/100;
-  i1 := i1 - e;
-  i2 := i2 + e;
-  aux := i1 * 10000;
-  aux := round(aux);
-  aux := trunc(aux);
-  aux := aux/100;
-  stringaux := FloatToStr(aux)+ '%';
-  EditI1.Text := stringaux;
-  aux := i2 * 10000;
-  aux := round(aux);
-  aux := trunc(aux);
-  aux := aux/100;
-  stringaux := FloatToStr(aux)+ '%';
-  EditI2.Text := stringaux;
-
-  n := Power((z*Sqrt(p*q))/e, 2);
+  if (ComboBoxSucesso.ItemIndex = 0) or (ComboBoxSucesso.ItemIndex = 1) then
+    n := Power((z*Sqrt(p*q))/e, 2)
+  else
+    n := Power((z*dp)/e, 2);
   if( frac(n)>0) then
   begin
     n := n+1;

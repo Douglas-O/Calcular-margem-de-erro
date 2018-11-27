@@ -23,49 +23,41 @@ inherited FCalculoDP_LgXhdpiPh: TFCalculoDP_LgXhdpiPh
       Position.X = 70.129875183105470000
       Position.Y = 197.952194213867200000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited EditE: TEdit
       Position.X = 268.831176757812500000
       Position.Y = 197.952194213867200000
       Size.Width = 107.532470703125000000
-      Size.Height = 32.000000000000000000
     end
     inherited EditA: TEdit
       Position.X = 70.129875183105470000
       Position.Y = 268.752624511718800000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited EditZ: TEdit
       Position.X = 268.831176757812500000
       Position.Y = 407.463653564453100000
       Size.Width = 107.532470703125000000
-      Size.Height = 32.000000000000000000
     end
     inherited EditPQ: TEdit
       Position.X = 70.129875183105470000
       Position.Y = 338.108123779296900000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited EditI1: TEdit
       Position.X = 70.129875183105470000
       Position.Y = 478.264068603515600000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited EditI2: TEdit
       Position.X = 267.898834228515600000
       Position.Y = 478.264068603515600000
       Size.Width = 107.532470703125000000
-      Size.Height = 32.000000000000000000
     end
     inherited EditEstimativa: TEdit
       Position.X = 70.129875183105470000
       Position.Y = 407.463653564453100000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited Label1: TLabel
       Position.X = 70.129875183105470000
@@ -134,27 +126,24 @@ inherited FCalculoDP_LgXhdpiPh: TFCalculoDP_LgXhdpiPh
       Position.X = 268.831176757812500000
       Position.Y = 268.752624511718800000
       Size.Width = 107.532470703125000000
-      Size.Height = 32.000000000000000000
     end
     inherited ComboBoxSucesso: TComboBox
       Position.X = 268.831176757812500000
       Position.Y = 338.108123779296900000
       Size.Width = 107.532470703125000000
-      Size.Height = 32.000000000000000000
     end
     inherited Label10: TLabel
       AutoSize = True
       Position.X = 70.129875183105470000
       Position.Y = 93.918922424316410000
       Size.Width = 211.000000000000000000
-      Size.Height = 18.000000000000000000
+      Size.Height = 16.000000000000000000
       TextSettings.Font.Size = 13.000000000000000000
     end
     inherited EditNA: TEdit
       Position.X = 70.129875183105470000
       Position.Y = 128.596679687500000000
       Size.Width = 107.532478332519500000
-      Size.Height = 32.000000000000000000
     end
     inherited Panel2: TPanel
       Size.Width = 450.000000000000000000
