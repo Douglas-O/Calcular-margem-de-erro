@@ -4,7 +4,7 @@ object FCalculoDP: TFCalculoDP
   Caption = 'C'#225'lculo de intervalo de confian'#231'a'
   ClientHeight = 411
   ClientWidth = 381
-  Position = Designed
+  Position = ScreenCenter
   StyleBook = StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -22,10 +22,10 @@ object FCalculoDP: TFCalculoDP
     TabOrder = 2
     object ButtonCalcularE: TButton
       Align = Scale
-      Position.X = 59.376621246337890000
-      Position.Y = 317.008392333984400000
-      Size.Width = 91.044158935546880000
-      Size.Height = 18.798370361328130000
+      Position.X = 59.000000000000000000
+      Position.Y = 325.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
       Text = 'Calcular E'
@@ -34,7 +34,7 @@ object FCalculoDP: TFCalculoDP
     object ButtonLimpar: TButton
       Align = Scale
       Position.X = 228.000000000000000000
-      Position.Y = 349.000000000000000000
+      Position.Y = 357.000000000000000000
       Size.Width = 91.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
@@ -84,9 +84,9 @@ object FCalculoDP: TFCalculoDP
       CanFocus = False
       ReadOnly = True
       Text = '0'
-      Position.X = 227.610382080078100000
-      Position.Y = 240.960525512695300000
-      Size.Width = 91.044158935546880000
+      Position.X = 228.000000000000000000
+      Position.Y = 249.000000000000000000
+      Size.Width = 91.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
@@ -107,9 +107,9 @@ object FCalculoDP: TFCalculoDP
       TabOrder = 6
       ReadOnly = True
       Text = '0'
-      Position.X = 59.376621246337890000
-      Position.Y = 282.829559326171900000
-      Size.Width = 91.044158935546880000
+      Position.X = 59.000000000000000000
+      Position.Y = 291.000000000000000000
+      Size.Width = 91.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
@@ -119,9 +119,9 @@ object FCalculoDP: TFCalculoDP
       TabOrder = 5
       ReadOnly = True
       Text = '0'
-      Position.X = 226.820983886718800000
-      Position.Y = 282.829559326171900000
-      Size.Width = 91.044158935546880000
+      Position.X = 227.000000000000000000
+      Position.Y = 291.000000000000000000
+      Size.Width = 91.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
@@ -129,9 +129,9 @@ object FCalculoDP: TFCalculoDP
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Scale
       TabOrder = 4
-      Position.X = 59.376621246337890000
-      Position.Y = 240.960525512695300000
-      Size.Width = 91.044158935546880000
+      Position.X = 59.000000000000000000
+      Position.Y = 249.000000000000000000
+      Size.Width = 91.000000000000000000
       Size.Height = 32.000000000000000000
       Size.PlatformDefault = False
     end
@@ -167,10 +167,10 @@ object FCalculoDP: TFCalculoDP
     end
     object Label4: TLabel
       Align = Scale
-      Position.X = 227.610382080078100000
-      Position.Y = 227.289077758789100000
-      Size.Width = 24.740264892578130000
-      Size.Height = 14.526046752929690000
+      Position.X = 228.000000000000000000
+      Position.Y = 235.000000000000000000
+      Size.Width = 24.000000000000000000
+      Size.Height = 15.000000000000000000
       Size.PlatformDefault = False
       Text = 'Z'
       TabOrder = 18
@@ -188,30 +188,30 @@ object FCalculoDP: TFCalculoDP
     object Label6: TLabel
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
-      Position.X = 59.376621246337890000
-      Position.Y = 227.289077758789100000
-      Size.Width = 137.555847167968800000
-      Size.Height = 14.526046752929690000
+      Position.X = 59.000000000000000000
+      Position.Y = 235.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 15.000000000000000000
       Size.PlatformDefault = False
       Text = 'Estimativa Pr'#233'via'
       TabOrder = 16
     end
     object Label7: TLabel
       Align = Scale
-      Position.X = 59.376621246337890000
-      Position.Y = 269.158050537109400000
-      Size.Width = 26.719478607177730000
-      Size.Height = 14.525970458984380000
+      Position.X = 59.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 27.000000000000000000
+      Size.Height = 15.000000000000000000
       Size.PlatformDefault = False
       Text = 'I1'
       TabOrder = 15
     end
     object Label8: TLabel
       Align = Scale
-      Position.X = 227.610382080078100000
-      Position.Y = 269.158050537109400000
-      Size.Width = 24.740264892578130000
-      Size.Height = 14.525970458984380000
+      Position.X = 228.000000000000000000
+      Position.Y = 277.000000000000000000
+      Size.Width = 24.000000000000000000
+      Size.Height = 15.000000000000000000
       Size.PlatformDefault = False
       Text = 'I2'
       TabOrder = 14
@@ -219,10 +219,10 @@ object FCalculoDP: TFCalculoDP
     object CheckBoxPossuiEstimativa: TCheckBox
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
-      Position.X = 149.431167602539100000
-      Position.Y = 240.960525512695300000
-      Size.Width = 65.314285278320310000
-      Size.Height = 16.234848022460940000
+      Position.X = 149.000000000000000000
+      Position.Y = 249.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 16.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 21
       Text = 'Possui'
@@ -230,10 +230,10 @@ object FCalculoDP: TFCalculoDP
     end
     object ButtonCalcularN: TButton
       Align = Scale
-      Position.X = 227.610382080078100000
-      Position.Y = 317.008392333984400000
-      Size.Width = 91.044158935546880000
-      Size.Height = 18.798370361328130000
+      Position.X = 228.000000000000000000
+      Position.Y = 325.000000000000000000
+      Size.Width = 91.000000000000000000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       Text = 'Calcular N'
@@ -258,7 +258,8 @@ object FCalculoDP: TFCalculoDP
       Items.Strings = (
         'Sucesso'
         'Falha'
-        'D. P.')
+        'D. P.'
+        'Vari'#226'ncia')
       ItemIndex = 0
       Position.X = 227.610382080078100000
       Position.Y = 199.945999145507800000
@@ -327,7 +328,7 @@ object FCalculoDP: TFCalculoDP
       Align = Scale
       StyledSettings = [Family, Style, FontColor]
       Position.X = 59.000000000000000000
-      Position.Y = 349.000000000000000000
+      Position.Y = 357.000000000000000000
       Size.Width = 94.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False

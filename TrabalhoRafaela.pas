@@ -194,6 +194,8 @@ begin
   else
   begin
     dp := StrToFloat(EditPQ.Text);
+    if ComboBoxSucesso.ItemIndex = 3 then
+      dp := Sqrt(dp);
     dp := dp/100;
     e := z * (dp/Sqrt(n));
     p := 0.5;
@@ -249,7 +251,7 @@ begin
     p := p/10000;
     q := 1-p;
   end
-  else if (ComboBoxSucesso.ItemIndex = 0) then
+  else if (ComboBoxSucesso.ItemIndex = 1) then
   begin
     q := StrToFloat(EditPQ.Text);
      if checkBoxPorcentagemPQ then
@@ -264,6 +266,8 @@ begin
   else
   begin
     dp := StrToFloat(EditPQ.Text);
+    if ComboBoxSucesso.ItemIndex = 3 then
+      dp := Sqrt(dp);
     dp := dp/100;
   end;
   z := StrToFloat(EditZ.Text);

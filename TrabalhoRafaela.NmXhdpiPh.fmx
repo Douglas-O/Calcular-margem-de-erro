@@ -1,6 +1,7 @@
 inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
   ClientHeight = 615
   ClientWidth = 400
+  FullScreen = True
   DesignerMasterStyle = 0
   inherited Panel1: TPanel
     Align = Fit
@@ -159,6 +160,7 @@ inherited FCalculoDP_NmXhdpiPh: TFCalculoDP_NmXhdpiPh
       TextSettings.Font.Size = 13.000000000000000000
     end
     inherited ButtonCalcularDP: TButton
+      Position.X = 62.337661743164060000
       Position.Y = 509.000000000000000000
       Size.Width = 96.000000000000000000
       Size.Height = 28.000000000000000000
